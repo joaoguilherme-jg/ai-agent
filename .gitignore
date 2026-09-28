@@ -9,3 +9,13 @@ wheels/
 # Virtual environments
 .venv
 .env
+
+# Editor/SO
+.vscode/
+.idea/
+.DS_Store
+
+# Caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
