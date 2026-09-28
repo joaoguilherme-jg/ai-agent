@@ -16,9 +16,8 @@ Para se comunicar com o modelo, o projeto usa o SDK oficial da OpenAI apontando 
 
 ## Pré-requisitos
 
-- [Git](https://git-scm.com/)
 - [uv](https://docs.astral.sh/uv/getting-started/installation/): gerenciador de pacotes e ambientes Python. Ele cria o ambiente virtual, instala as dependências nas versões exatas registradas no `uv.lock` e usa a versão de Python do projeto.
-
+- Uma chave de API da [OpenRouter](https://openrouter.ai/) (o plano gratuito é suficiente).
 ## Instalação
 
 Clone o repositório e instale as dependências:
