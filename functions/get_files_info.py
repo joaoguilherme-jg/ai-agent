@@ -13,10 +13,6 @@ def get_files_info(working_directory: str, directory: str = ".") -> str:
 
         if not os.path.isdir(target_dir):
             return f'Error: "{directory}" is not a directory'
-
-        files_info = []
-        for item in os.listdir(target_dir):
-            item_path = os.path.join(target_dir, item)
         
         files_info = []
         print("Result for current directory:")

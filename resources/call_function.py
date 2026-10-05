@@ -33,7 +33,17 @@ def call_function(tool_call, verbose: bool = False) -> dict:
     else:
         print(f" - Calling function: {function_name}")
 
-    result = function_map[function_name](**function_args)
+    if function_name not in function_map:
+        return {
+            "role": "tool",
+            "tool_call_id": tool_call.id,
+            "content": f'Error: unknown function "{function_name}"',
+        }
+
+    try:
+        result = function_map[function_name](**function_args)
+    except Exception as e:
+        result = f'Error: executing "{function_name}": {e}'
 
     return {
         "role": "tool",

@@ -2,6 +2,16 @@
 
 Agente de IA para linha de comando (CLI), escrito em Python. Ele recebe uma tarefa em linguagem natural, escolhe entre um conjunto de funções pré-definidas e repete esse ciclo até concluir a tarefa.
 
+## Objetivo do projeto
+
+Este é um projeto de estudo cujo objetivo é **entender na prática como funciona um agente de IA**: o loop modelo ↔ ferramenta, o formato estruturado das tool calls e como o código local executa as ações que o modelo solicita.
+
+Por ser educacional, o agente tem **poder limitado e roda em um ambiente controlado**:
+
+- o `working_directory` é forçado em `resources/call_function.py` para `./calculator`, então ele só lista, lê, escreve e executa arquivos dentro dessa pasta;
+
+**Cenário de teste:** introduzir um bug na calculadora (por exemplo, a soma passar a ter precedência sobre a multiplicação) e pedir ao agente para relatar o erro e corrigir. Espera-se que ele reproduza o bug executando o script, identifique o problema e reescreva a lógica da operação correta.
+
 ## O que o agente faz
 
 1. Recebe uma tarefa escrita pelo usuário.
